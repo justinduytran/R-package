@@ -2,8 +2,6 @@
 
 export(indexify)
 export(read_abscensustablebuilder)
-export(select_abs)
-export(sepseries_abs)
 export(trimwsdf)
 export(xlcolconv)
 importFrom(readxl,read_excel)
