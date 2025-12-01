@@ -2,6 +2,9 @@
 
 export(CAGR)
 export(excel_column_conversion)
+export(get_place_point)
 export(indexify)
 export(trimws_df)
 export(write_csv_out)
+import(osmdata)
+import(sf)
