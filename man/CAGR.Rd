@@ -2,23 +2,23 @@
 % Please edit documentation in R/CAGR.R
 \name{CAGR}
 \alias{CAGR}
-\title{Compute rate of return (compound annual growth rate)}
+\title{Calculate compounded growth rate}
 \usage{
-CAGR(period, FV, PV)
+CAGR(t, `x_i+t`, x_i)
 }
 \arguments{
-\item{period}{Number of compounding periods.}
+\item{t}{Number of compounding periods.}
 
-\item{FV}{Future value.}
+\item{x_i+t}{Ending value.}
 
-\item{PV}{Present value.}
+\item{x_i}{Starting value.}
 }
 \value{
-A rate of return
+numeric
 }
 \description{
-Function to compute rate of return. Most commonly used to calculate the compound annual growth rate of a series.
+Calculates the compounded growth rate for between a starting and ending value given a number of (equal) time periods. Usually used to compute the Compound Annual Growth Rate (CAGR) but can be used with different periods.
 }
 \details{
-Computes formula: (FV/PV)^(1/period)-1
+Computes formula: (x_(i+t)/x_i)^(1/t)-1
 }

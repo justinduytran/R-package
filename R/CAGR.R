@@ -1,19 +1,18 @@
-#' Compute rate of return (compound annual growth rate)
+#' Calculate compounded growth rate
+#' 
+#' Calculates the compounded growth rate for between a starting and ending value given a number of (equal) time periods. Usually used to compute the Compound Annual Growth Rate (CAGR) but can be used with different periods. 
 #'
-#' Function to compute rate of return. Most commonly used to calculate the compound annual growth rate of a series.
-#'
-#' @param period Number of compounding periods. 
-#' @param FV Future value.
-#' @param PV Present value.
+#' @param t Number of compounding periods.
+#' @param x_i+t Ending value.
+#' @param x_i Starting value. 
 #' 
 #' @details
-#' Computes formula: (FV/PV)^(1/period)-1
-#' 
-#' @return A rate of return
+#' Computes formula: (x_(i+t)/x_i)^(1/t)-1
+#'
+#' @return numeric
 #'
 #' @export
 
-CAGR <- function(period, FV, PV) {
-  growth_rate <- (FV/PV)^(1/period)-1
-  return(growth_rate)
+CAGR <- function(t, `x_i+t`, x_i) {
+  (`x_i+t` / x_i)^(1 / t) - 1
 }
