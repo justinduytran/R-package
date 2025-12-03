@@ -94,9 +94,9 @@ get_place_point <- function(place_name, place_name_detail = NULL, place_value, c
     
     # Filter on closest match
     # lowest value
-    fuzzy_min <- osm_place_fuzzy_match$fuzzy_match |> min()
+    fuzzy_min <- osm_place$fuzzy_match |> min()
     # filter
-    osm_place <- subset(osm_place_fuzzy_match, fuzzy_match == fuzzy_min)
+    osm_place <- subset(osm_place, fuzzy_match == fuzzy_min)
   }
   
   if (isTRUE(filter_extra_cols)) {
