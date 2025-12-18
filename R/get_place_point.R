@@ -60,7 +60,7 @@ get_place_point <- function(place_name, place_name_detail = NULL, place_value, c
   osm_bb <- osmdata::getbb(prompt, format_out = "sf_polygon", featuretype = place_value)
   
   # Use the bbox of the above call to look for the polygon for each administrative boundary
-  osm_place_query <- osmdata::opq(bbox = osm_bb) |>
+  osm_place_query <- osmdata::opq(bbox = osm_bb, timeout = 120) |>
     # Only pull the place type we want
     osmdata::add_osm_feature(key = "place", value = place_value)
   
